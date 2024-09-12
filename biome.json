@@ -1,10 +1,13 @@
 {
 	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
 	"organizeImports": { "enabled": true },
+	"formatter": {
+		"indentStyle": "space"
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": false,
+			"recommended": true,
 			"a11y": {
 				"noAriaUnsupportedElements": "warn",
 				"noBlankTarget": "off",
@@ -24,7 +27,15 @@
 				"useArrayLiterals": "off",
 				"useExhaustiveDependencies": "warn",
 				"useHookAtTopLevel": "error",
-				"useJsxKeyInIterable": "error"
+				"useJsxKeyInIterable": "error",
+				"noUnusedImports": "error"
+			},
+			"nursery": {
+				"useSortedClasses": {
+					"level": "error",
+					"fix": "safe",
+					"options": {}
+				}
 			},
 			"security": { "noDangerouslySetInnerHtmlWithChildren": "error" },
 			"style": { "noNamespace": "error", "useAsConstAssertion": "error" },
